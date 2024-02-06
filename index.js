@@ -116,3 +116,6 @@ async function init() {
         console.error('Error generating README: ', error);
     }
 }
+
+// Call the init function to start the application
+init();

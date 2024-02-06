@@ -105,3 +105,14 @@ ${data.tests}
 For any questions, please contact me at [${data.email}](mailto:${data.email}) or visit my GitHub profile at [${data.github}](https://github.com/${data.github}).
     `;
 }
+
+// Function to initialize app and generate README
+async function init() {
+    try {
+        const answers = await inquirer.prompt(questions);
+        const readmeContent = generateMarkdown(answers);
+        await writeToFile('README.md', readmeContent);
+    } catch (error) {
+        console.error('Error generating README: ', error);
+    }
+}

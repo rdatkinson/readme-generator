@@ -55,3 +55,13 @@ const questions = [
         message: 'Enter your email address:',
     },
 ];
+
+// Function to write README file using async/await
+async function writeToFile(fileName, data) {
+    try {
+        await writeFileAsync(fileName, data);
+        console.log('Successfully created README.md!');
+    } catch (err) {
+        console.error(err);
+    }
+}

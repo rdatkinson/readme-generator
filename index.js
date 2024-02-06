@@ -5,3 +5,53 @@ import { promisify } from 'util';
 
 // Promisify writeFile for use with async/await
 const writeFileAsync = promisify(fs.writeFile);
+
+// Questions for user input
+const questions = [
+    {
+        type: 'input',
+        name: 'title',
+        message: 'What is the title of your project?',
+    },
+    {
+        type: 'input',
+        name: 'description',
+        message: 'Provide a description of your project:',
+    },
+    {
+        type: 'input',
+        name: 'installation',
+        message: 'How is your project installed?',
+    },
+    {
+        type: 'input',
+        name: 'usage',
+        message: 'How is your project used?',
+    },
+    {
+        type: 'list',
+        name: 'license',
+        message: 'Choose a license for your project:',
+        choices: ['MIT', 'Apache 2.0', 'GPLv3', 'BSD 3-Clause', 'None'],
+    },
+    {
+        type: 'input',
+        name: 'contributing',
+        message: 'How can others contribute to your project?',
+    },
+    {
+        type: 'input',
+        name: 'tests',
+        message: 'How can your project be tested?',
+    },
+    {
+        type: 'input',
+        name: 'github',
+        message: 'Enter your GitHub username:',
+    },
+    {
+        type: 'input',
+        name: 'email',
+        message: 'Enter your email address:',
+    },
+];
